@@ -6,12 +6,17 @@
 \usepackage{esint}%积分符号
 \newcommand{\point}[1]{$\color{blue}{\text{#1}}$}
 \setlength{\parindent}{0pt}%不缩进
+\usepackage[a4paper]{geometry}%纸张大小和页边距
+\geometry{top=2.5cm,bottom=2.5cm}%页边距设置
+\usepackage{titlesec}%修改Latex默认section,subsection样式
+\titleformat*{\section}{\Large\centering\bfseries}
 
 \title{普物复习}
 \author{191220090 沈天杰}
 \begin{document}
     \maketitle
     {\centering\tableofcontents}
+    \newpage
     \section{静止电荷的电场}
     \noindent基本物理量: 电荷\quad电场强度\quad电势\footnote{电势梯度与场强}\\
     基本定律:电荷守恒定律,库仑定律,场强叠加原理,高斯定律,安培环路定理
@@ -29,7 +34,7 @@
     场强叠加原理 离散与连续。\\\\
     \point{考题1}：两电荷连线的中垂面上任意一点P的电场强度\\
     电偶极子(或称电偶极矩):$\vec{p}=q\vec{l}$\\
-    电偶极子在其延长线上远场点电场强度$E=\frac{p_e}{2\pi\epsilon_0r^3}$
+    电偶极子在其延长线上远场点电场强度$E=\frac{p_e}{2\pi\epsilon_0r^3}$\\
     注意\;1)\;l很小(相对于r) 2)\;方向从负电荷指向正电荷。\\
     点P的电场强度方向与电偶极子相反。电偶极子的电场强度是立方衰减的。\\
     \point{考题2}：无限长均匀带电细棒中垂面上的场强分布\\
@@ -53,7 +58,8 @@
         \centering
         \includegraphics[width=.95\textwidth]{figure/inf.png}
     \end{figure}
-    \point{总结}:计算场强分布的三种办法：1。库仑定律+场强叠加原理2。电荷对称性分布：高斯定理3。电势梯度
+    \point{总结}:计算场强分布的三种办法：\\
+    1。库仑定律+场强叠加原理2。电荷对称性分布：高斯定理3。电势梯度
     \subsection{电场线}
     \noindent电场线：电场线上每一点的切线方向都与该点的场强E方向一致；在与电场强度垂直的单位面积中，所穿过的电场线根数与该处的场强大小成正比。
     \[
@@ -167,5 +173,29 @@
       W=\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}CU^2=\frac{1}{2}\epsilon E^2Sd=\frac{1}{2}D\cdot E \cdot Sd  
     \]
     \section{恒定电流及其磁场}
+    \subsection{恒定电流和导电定律}
+    \subsubsection{电流密度}
+    电流密度为位置的矢量，该点正电荷移动方向。$I=\iint_S \vec{j}\cdot d\vec{S}$\\
+    \subsubsection{电流密度与电场强度关系}
+    \[
+        \vec{j}=\sigma \vec{E}\quad \sigma \text{为电导率}  
+    \]
+    它实际上是欧姆定律的微分形式$I=\frac{U}{R}$
+    \subsection{磁场和磁感应强度}
+    磁感应强度B的大小可以用运动的试探电荷在磁场中的受力来表征。\\
+    洛伦兹力$\vec{F}=q_0 \; \vec{v} \times \vec{B}$\\
+    \subsection{毕奥—萨伐尔定律}
+    仿照电场，磁场的研究通过电流元$Idl$进行。
+    \[
+      d\vec{B}=\frac{\mu_0}{4\pi} \frac{Id \vec{l} \times \vec{r}}{r^3}  
+    \]
+    其中$\mu$为真空磁导率,$\frac{\mu_0}{4\pi}=10^{-7}T\cdot m/A$\\
+    运动电荷激发的磁场
+    \[
+    \vec{B}=\frac{\mu_0}{4\pi}\frac{q\vec{v} \times \vec{r}}{r^3}\quad \rightarrow \text{平方衰减}    
+    \]
+    \subsection{磁场的高斯定理和安培环路定理}
+    \subsection{带电粒子在磁场中的运动}
+    \subsection{磁场对载流导线的作用}
     \section{电磁感应、麦克斯韦方程组}
 \end{document}
