@@ -20,6 +20,21 @@
 	\tableofcontents
 	\newpage
 	\section{数制与编码}
+	\subsection{浮点数}
+	IEEE754浮点标准形式$V=(–1)^s M \; 2^E$
+	\begin{itemize}
+		\item 符号位S(Sign)：决定这个数是正数(s=0)还是负数(s=1)。
+		\item 尾数M(significand)：是一个二进制小数，范围在[1.0，2.0)
+		\item 阶码E(exponent)：对浮点数加权重，权重是2的E次幂。
+	\end{itemize}
+	编码分三段，1位符号字段s;k位阶码字段exp;n位小数字段frac。\\
+	注：exp表示阶码E的偏置(biased)形式: exp =E+ Bias (Bias=2k-1-1)\\
+	\subsection{带符号数的表示及运算}
+	\begin{itemize}
+		\item 原码：符号位+数值（特点：2种零）
+		\item 补码：原+补=$R^n$ 按位取反+1
+		\item 反码：原+反=$R^n-1$
+	\end{itemize}
 	\section{组合逻辑设计原理（布尔代数）}
 	\section{组合逻辑电路分析与设计}
 	\textbf{扇入}指在特定的逻辑系列中，门电路所具有的输入端的数目。\textbf{扇出}指逻辑门电路在不超出其最坏情况负载规格的条件下，能够驱动输入端个数。扇出是必须要计算的。
@@ -98,5 +113,6 @@
 	
 	\subsubsection{同步时序电路实例}
 	\section{思考题题型}
-	
+	\subsection{组合电路}
+	n位二进制译码器给出位二进制译码器给出nn变量的全部最小项变量的全部最小项。\\
 \end{document}

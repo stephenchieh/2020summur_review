@@ -17,6 +17,156 @@
     \maketitle
     {\centering\tableofcontents}
     \newpage
+    \section{力学}
+    \subsection{牛顿定律}
+    \begin{enumerate}
+        \item 第三定律中的力只是宏观的经典概念，超出这个范围并不好用。
+        \item 考虑到相互作用传递低于光速后的图像。
+    \end{enumerate}
+    \subsubsection{\point{考题}}
+    主要是受力分析。惯性力。\\
+    相对运动，恒力作用下的直线运动曲线运动，滑轮模型，摩擦力，变力作用下的直线运动。
+    \[
+      a=\frac{dv}{dt}=\frac{dv}{dx}v  
+    \]
+    \subsection{动能，机械能}
+    若定义无限远处为引力势能零点
+    \[
+        E_p=-\frac{GmM}{r}
+    \]
+    一对非保守内力(耗散力)做负功，使系统动能减少。\\
+    机械能守恒(质点在只受保守力场的作用时)
+    \[
+      E_K+V_A=const  
+    \]
+    其中$E_K$为质点动能，$V$为质点在保守力场中的势能。
+    \subsection{动量，角动量，守恒律}
+    \subsubsection{动量}
+    \begin{enumerate}
+        \item 动量定理只适用于惯性系，对非惯性系。。。 
+        \item 在牛顿力学的理论体系中，动量守恒定律是牛顿定律的推论。但动量守恒定律是更普遍、更基本的定律，它在宏观和微观领域、低速和高速范围均适用
+    \end{enumerate}
+    \point{经典例题}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.65\textwidth]{figure/pin.png}
+    \end{figure}
+    子弹质量忽略不计
+    \subsection{角动量}
+    有心力：角动量守恒$L=J \omega= Mt$
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.65\textwidth]{figure/omega.png}
+    \end{figure}
+    \subsection{刚体}
+    转动惯量
+    \begin{equation*}
+        J=
+        \begin{cases}
+            mR^2 & \text{圆环}\\
+            \frac{1}{2}mR^2& \text{圆环直径 ；圆盘}\\
+            \frac{2}{5}mR^2& \text{球体}\\
+            \frac{2}{3}mR^2& \text{球壳}\\
+            \frac{1}{3}mR^2& \text{细棒(端点)}\\
+            \frac{1}{12}mR^2& \text{细棒(中心轴)}\\
+        \end{cases}
+    \end{equation*}
+    \begin{figure}[H]s
+        \centering
+        \includegraphics[width=.65\textwidth]{figure/fill.png}
+    \end{figure}
+    \begin{equation*}
+        \begin{cases}
+            r \sim \theta \\
+            v \sim \omega \\
+            a \sim \alpha \\
+            F \sim M \\
+            m \sim J \\
+        \end{cases}
+    \end{equation*}
+    对滑轮
+    \[
+    M=FR=J \alpha    
+    \]
+    平行轴定理
+    \[
+        J=J_c+md^2  
+    \]
+    \section{气体运动论}
+    理想气体物态方程
+    \[
+    pV=vRT    
+    \]
+    \[
+      p=\frac{m}{VM}RT=\frac{NM_0}{VN_Am_0}RT=n\frac{R}{N_A}T=nk_BT  
+    \]
+    玻耳兹曼常数$k_B=\frac{R}{N_A}=1.39 \times 10^{-23} (J/K)$\\
+    麦克斯韦速率分布律:
+    \[
+      f(v)=4\pi (\frac{m}{2\pi kT})^{3/2}e^{-mv^2/2kT}\cdot v^2  
+    \]
+    其中m为单个粒子质量，k为玻尔兹曼常数\\
+    方均根速率
+    \[
+    \sqrt{\overline{v^2}}=\sqrt{\frac{\sum\limits_{i=1}^n v_i^2N_i}{N}}    
+    \]
+    最概然速率$v_p$:出现次数最多的速率
+    \begin{align*}
+             v_p&=\sqrt{\frac{2kT}{m}}    \\
+             \overline{v} &\approx 1.1v_p \\
+             \sqrt{\overline{v^2}}&=\sqrt{\frac{3kT}{m}} \approx 1.2v_p 
+    \end{align*}
+    平均平动动能
+    \[
+    \overline{\varepsilon_k}=\frac{1}{2}m\overline{v^2}=\frac{3}{2}k_BT
+    \]
+    自由度i
+    \begin{table}[H]
+        \centering
+        \setlength{\tabcolsep}{16mm}{
+        \begin{tabular}{|c|c|}
+        \hline
+        单原子分子 & 3 \\ \hline
+        双原子分子 & 5 \\ \hline
+        多原子分子 & 6 \\ \hline
+        \end{tabular}}
+        \end{table}
+    内能$U=v\frac{i}{2}RT$
+    \section{热力学}
+    \begin{itemize}
+        \item 热力学第零定律定义了温度这一物理量，指出了相互接触的两个系统，热流的方向。
+        \item 热力学第一定律指出内能这一物理量的存在，并且与系统整体运动的动能和系统与环境相互作用的势能是不同的，区分出热与功的转换。
+        \item 热力学第二定律涉及的物理量是温度和熵。熵是研究不可逆过程引入的物理量，表征系统透过热力学过程向外界最多可以做多少热力学功。
+        \item 热力学第三定律认为，不可能透过有限过程使系统冷却到绝对零度。
+    \end{itemize}
+
+    \begin{enumerate}
+        \item 热力学第零定律：在不受外界影响的情况下，只要A和B同时与C处于热平衡，即使A和B没有热接触，他们仍然处于热平衡状态。这个定律说明，互相处于热平衡的物体之间必然具有相等的温度。
+        \item 热力学第一定律：能量守恒定律对非孤立系统的扩展。此时能量可以以功W或热量Q的形式传入或传出系统。热力学第一定律表达式为：${\displaystyle \Delta E_{\text{int}}\ =E_{\text{int,f}}-E_{\text{int,i}}=Q-W}$
+        \item 热力学第二定律：孤立系统熵（失序）不会减少──简言之，热不能自发的从冷处转到热处，而不引起其他变化。任何高温的物体在不受热的情况下，都会逐渐冷却。这条定律说明第二类永动机不可能制造成功。热力学第二定律也可表示为熵增原理：${\displaystyle \Delta S\geq 0}\Delta S\geq 0$。
+        \item 热力学第三定律：完整晶体于绝对温度零度时（即摄氏-273.15度），熵增为零。
+    \end{enumerate}
+    \subsection{热一}
+    等容变化,等压变化，绝热变化
+    \begin{align*}
+        C_{V,m}&=\frac{i}{2}R\\
+        C_{p,m}&=\frac{i+2}{2}R
+    \end{align*}
+    绝热过程物态方程
+    \[
+        pV^\gamma=V^{\gamma-1}T=p^{\gamma-1}T^{-\gamma}=C
+    \]
+    \subsection{热二}
+    热机效率
+    \[
+    \eta=1-\frac{Q_2}{Q_1}=1-\frac{T_2}{T_1}    
+    \]
+    熵（可逆过程公式）
+    \[
+     dS=\frac{dQ}{T}   
+    \]
+    可逆的绝热过程是等熵过程。等熵过程的对立面是等温过程，在等温过程中，最大限度的热量被转移到了外界，使得系统温度恒定如常。由于在热力学中，温度与熵是一组共轭变量，等温过程和等熵过程也可以视为“共轭”的一对过程。
+    
     \section{静止电荷的电场}
     \noindent基本物理量: 电荷\quad电场强度\quad电势\footnote{电势梯度与场强}\\
     基本定律:电荷守恒定律,库仑定律,场强叠加原理,高斯定律,安培环路定理
@@ -142,6 +292,7 @@
       \vec{E}=-\nabla V    
     \]
     其中$\vec{\nabla} \equiv \vec{i}\frac{\partial}{\partial x}+\vec{j}\frac{\partial}{\partial y}+\vec{k}\frac{\partial}{\partial z}$
+    接触后等势
     \subsection{静电场中的导体}
     \subsubsection{静电平衡}
     静电感应最终使导体内部场强为0。达到静电平衡的状态。(有电流的电线不是静电平衡)
@@ -150,6 +301,11 @@
         \item 导体表面的电场强度垂直于导体表面。
     \end{itemize}
     \subsubsection{静电平衡导体的电荷分布与电场}
+    静电平衡时导体中的电场特性：
+    \begin{itemize}
+        \item 导体内部的电场强度处处为零。且导体表面的电场强度垂直于导体的表面。
+        \item 导体内部和导体表面处处电势相等，整个导体是个等势体。
+    \end{itemize}
     \begin{enumerate}
         \item 对实心导体情况
         \item 对导体空腔情况
@@ -184,7 +340,7 @@
     \subsection{磁场和磁感应强度}
     磁感应强度B的大小可以用运动的试探电荷在磁场中的受力来表征。\\
     洛伦兹力$\vec{F}=q_0 \; \vec{v} \times \vec{B}$\\
-    \subsection{毕奥—萨伐尔定律}
+    \subsection{毕萨定律}
     仿照电场，磁场的研究通过电流元$Idl$进行。
     \[
       d\vec{B}=\frac{\mu_0}{4\pi} \frac{Id \vec{l} \times \vec{r}}{r^3}  
@@ -194,8 +350,51 @@
     \[
     \vec{B}=\frac{\mu_0}{4\pi}\frac{q\vec{v} \times \vec{r}}{r^3}\quad \rightarrow \text{平方衰减}    
     \]
+    \point{结论}
+    \begin{equation*}
+        \begin{cases}
+            \text{无限长电流磁场：}&B=\frac{\mu_0I}{2\pi R}\\
+            \text{圆电流圆心处磁场：}&B=\frac{\mu_0I}{2R}\\
+        \end{cases}
+    \end{equation*}
     \subsection{磁场的高斯定理和安培环路定理}
+    \[
+        \oint_L \vec{B}\cdot d\vec{l}=\mu_0\sum\limits_\text{L内}I_i  
+    \]
+    无限长直圆柱形载流导线内外空间磁场的分布
+    \begin{equation*}
+        B=
+        \begin{cases}
+            \frac{\mu_0Ir}{2\pi R^2} & (0\leq r \textless R)\\
+            \frac{\mu_0I}{2\pi r}&(R\leq r \textless \infty)
+        \end{cases}
+    \end{equation*}
     \subsection{带电粒子在磁场中的运动}
-    \subsection{磁场对载流导线的作用}
+    %\subsection{磁场对载流导线的作用}
     \section{电磁感应、麦克斯韦方程组}
+    %\subsection{电动势}
+    %\subsection{电磁感应和楞次定律}
+    \subsection{法拉第电磁感应定律}
+    穿过闭合回路所围曲面的磁通量发生变化时，导体回路中产生的感应电动势正比于磁通量变化率的负值
+    \[
+        \varepsilon_i=-\frac{d\Phi}{dt}    
+    \]
+    其中$\Phi=\iint_S \vec{B}\cdot d\vec{S}$
+    \subsection{感生电动势和动生电动势}
+    \subsubsection{感生电动势}
+    \[
+        \varepsilon_i=-\frac{d\Phi}{dt}=-\frac{d}{dt}\iint_S \vec{B}\cdot d\vec{S}    
+    \]
+    \begin{equation*}
+        \begin{cases}
+            \text{回路面积（S）改变：}&\text{磁场不动，导体动－－动生电动势}\\
+            \text{磁场（B）改变：}&\text{导体不动，磁场变－－感生电动势}\\
+        \end{cases}
+    \end{equation*}
+    \subsubsection{动生电动势}
+    \[
+        \Phi=Blv
+    \]
+    %\subsection{涡旋电场}
+    %\subsection{麦克斯韦方程组}
 \end{document}
